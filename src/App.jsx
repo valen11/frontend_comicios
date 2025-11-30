@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 
-export default function SistemaElectoral() {
+export default function App() {
   // Estados principales
   const [provincias, setProvincias] = useState([
     "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes", "Entre Ríos",
@@ -99,7 +98,7 @@ export default function SistemaElectoral() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Header */}
       <header className="bg-blue-600 text-white p-4 text-center shadow-lg">
         <h1 className="text-2xl font-bold">Sistema de Carga y Conteo de Comicios 2025</h1>
@@ -122,11 +121,10 @@ export default function SistemaElectoral() {
         ))}
       </nav>
 
-      {/* Contenido principal */}
-      <main className="p-6 max-w-7xl mx-auto">
+      <main className="p-6 flex-1 w-full">
         {/* PANEL */}
         {seccionActiva === 'panel' && (
-          <div className="bg-white rounded-xl shadow-lg p-6 animate-fadeIn">
+          <div className="bg-white rounded-xl shadow-lg p-6 animate-fadeIn h-full">
             <h2 className="text-2xl font-bold text-blue-600 mb-4">Resumen General</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-4 rounded-lg shadow">
